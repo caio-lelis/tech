@@ -1,0 +1,5 @@
+---
+import '../styles/global.css';
+const { title, description } = Astro.props;
+---
+<!doctype html><html lang="pt-BR"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content={description} /><title>{title}</title></head><body><header><a class="brand" href={import.meta.env.BASE_URL}>CL<span>.</span></a><nav><a href={import.meta.env.BASE_URL}>Início</a><a href="https://github.com/caio-lelis">GitHub</a></nav></header><main><slot /></main><footer>Feito por Caio Lelis · <a href="https://github.com/caio-lelis/blog-tech">Código-fonte</a></footer></body></html>
