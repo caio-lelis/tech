@@ -4,6 +4,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const posts = (await getCollection('posts')).filter((post) => !post.data.draft).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 <BaseLayout title="Caio Lelis — notas de tecnologia" description="Estudos, projetos e anotações sobre programação e tecnologia.">
-  <section class="hero"><p class="eyebrow">Olá, eu sou o Caio</p><h1>Notas de quem está sempre aprendendo.</h1><p>Um espaço para registrar estudos, construir em público e compartilhar o que aprendo sobre programação, software e tecnologia.</p></section>
-  <section><p class="eyebrow">Últimos textos</p><h2>Estudos recentes</h2><div class="post-list">{posts.map((post) => <article><p>{post.data.pubDate.toLocaleDateString('pt-BR')}</p><h3><a href={`/posts/${post.id}/`}>{post.data.title}</a></h3><p>{post.data.description}</p><div class="tags">{post.data.tags.map((tag) => <span>{tag}</span>)}</div></article>)}</div></section>
+  <section class="hero"><p class="eyebrow">Prazer, seja bem vindo ao meu espaço de aprendizado</p><h1>Notas de quem está sempre aprendendo.</h1><p>Um espaço para registrar estudos, construir em público e compartilhar o que aprendo sobre programação, software e tecnologia.</p></section>
+  <section><p class="eyebrow">Últimos textos</p><h2>Estudos recentes</h2><div class="post-list">{posts.map((post) => <article><p>{post.data.pubDate.toLocaleDateString('pt-BR')}</p><h3><a href={`${import.meta.env.BASE_URL}posts/${post.id}/`}>{post.data.title}</a></h3><p>{post.data.description}</p><div class="tags">{post.data.tags.map((tag) => <span>{tag}</span>)}</div></article>)}</div></section>
 </BaseLayout>
