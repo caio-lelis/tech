@@ -34,4 +34,4 @@ Conteúdo em Markdown.
 
 Use `draft: true` para manter o texto fora do site. Todo push na `main` publica em GitHub Pages. Em **Settings → Pages**, selecione **GitHub Actions** como fonte na primeira publicação.
 
-Site: https://caio-lelis.github.io/blog-tech/
+Site: https://caio-lelis.github.io/tech/
